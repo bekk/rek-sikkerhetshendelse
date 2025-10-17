@@ -1,0 +1,134 @@
+Timestamp,EventType,User,SourceIP,TargetResource,Action,Details,Result
+2024-10-10 08:32:15,HTTP_REQUEST,safevault_app,10.20.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-10 08:35:22,HTTP_REQUEST,safevault_app,10.20.1.10,/api/customers/list,GET,Customer list retrieval,200
+2024-10-10 08:47:33,DATABASE_QUERY,safevault_app,10.20.1.10,prod-db-server-01:5432,SELECT,Query: SELECT * FROM backup_jobs WHERE status='running',Success
+2024-10-10 09:12:44,HTTP_REQUEST,safevault_app,10.20.1.10,/api/backup/schedule,POST,Scheduled backup for customer ID 1247,201
+2024-10-10 09:28:15,CRON_JOB,root,localhost,/opt/safevault/scripts/cleanup.sh,EXECUTE,Daily cleanup job started,Success
+2024-10-10 09:45:33,HTTP_REQUEST,safevault_app,10.20.1.10,/api/restore/request,POST,Restore request from customer ID 0842,200
+2024-10-10 10:15:47,DATABASE_QUERY,safevault_app,10.20.1.10,prod-db-server-01:5432,INSERT,Query: INSERT INTO backup_logs VALUES(...),Success
+2024-10-10 10:33:22,HTTP_REQUEST,safevault_app,10.20.1.10,/api/health,GET,System health check,200
+2024-10-10 11:05:18,FILE_ACCESS,safevault_app,10.20.1.10,/opt/safevault/logs/application.log,READ,Log rotation process,Success
+2024-10-10 11:23:44,VPN_CONNECTION,ola.hansen,10.10.0.15,prod-app-server-01,HTTPS,Legitimate admin access via VPN,Success
+2024-10-10 11:24:18,HTTP_REQUEST,ola.hansen,10.10.0.15,/admin/dashboard,GET,Admin dashboard access,200
+2024-10-10 11:35:27,DATABASE_QUERY,safevault_app,10.20.1.10,prod-db-server-01:5432,SELECT,Query: SELECT COUNT(*) FROM customers,Success
+2024-10-10 12:15:33,HTTP_REQUEST,safevault_app,10.20.1.10,/api/backup/complete,POST,Backup completed for customer ID 1523,200
+2024-10-10 12:44:55,CRON_JOB,root,localhost,/opt/safevault/scripts/backup_verification.sh,EXECUTE,Backup verification job,Success
+2024-10-10 13:22:18,HTTP_REQUEST,safevault_app,10.20.1.10,/api/customers/stats,GET,Customer statistics retrieval,200
+2024-10-10 13:45:42,VPN_CONNECTION,kjetil.berg,10.10.0.22,prod-app-server-01,SSH,Developer SSH access for maintenance,Success
+2024-10-10 13:46:15,COMMAND_EXECUTED,kjetil.berg,10.10.0.22,/usr/bin/top,EXECUTE,System resource monitoring,Success
+2024-10-10 13:52:33,COMMAND_EXECUTED,kjetil.berg,10.10.0.22,/usr/bin/systemctl status safevault,EXECUTE,Service status check,Success
+2024-10-10 14:08:27,HTTP_REQUEST,safevault_app,10.20.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-10 14:35:44,DATABASE_QUERY,safevault_app,10.20.1.10,prod-db-server-01:5432,UPDATE,Query: UPDATE backup_jobs SET status='completed' WHERE id=4782,Success
+2024-10-10 15:12:29,HTTP_REQUEST,safevault_app,10.20.1.10,/api/restore/progress,GET,Restore progress check,200
+2024-10-10 15:44:18,VPN_DISCONNECT,kjetil.berg,10.10.0.22,prod-app-server-01,SSH,SSH session closed,Success
+2024-10-10 16:23:55,CRON_JOB,root,localhost,/opt/safevault/scripts/metrics_collector.sh,EXECUTE,Metrics collection job,Success
+2024-10-10 16:55:37,HTTP_REQUEST,safevault_app,10.20.1.10,/api/health,GET,System health check,200
+2024-10-10 17:32:44,DATABASE_QUERY,safevault_app,10.20.1.10,prod-db-server-01:5432,SELECT,Query: SELECT * FROM backup_jobs WHERE created_at > NOW() - INTERVAL '1 day',Success
+2024-10-11 02:00:15,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-11 02:15:33,DATABASE_QUERY,safevault_app,10.20.1.10,prod-db-server-01:5432,SELECT,Query: SELECT * FROM backup_schedules,Success
+2024-10-11 08:15:42,HTTP_REQUEST,safevault_app,10.20.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-11 08:37:52,VPN_CONNECTION,kjetil.berg,10.10.0.22,prod-app-server-01,SSH,Developer SSH access,Success
+2024-10-11 08:38:24,COMMAND_EXECUTED,kjetil.berg,10.10.0.22,/usr/bin/df -h,EXECUTE,Disk space check,Success
+2024-10-11 08:42:18,COMMAND_EXECUTED,kjetil.berg,10.10.0.22,/usr/bin/docker ps,EXECUTE,Container status check,Success
+2024-10-11 09:08:45,VPN_CONNECTION,kjetil.berg,10.10.0.22,prod-db-server-01,PostgreSQL,Database connection via VPN,Success
+2024-10-11 09:12:33,HTTP_REQUEST,safevault_app,10.20.1.10,/api/customers/list,GET,Customer list retrieval,200
+2024-10-11 09:45:27,DATABASE_QUERY,safevault_app,10.20.1.10,prod-db-server-01:5432,INSERT,Query: INSERT INTO backup_logs VALUES(...),Success
+2024-10-11 10:22:44,CRON_JOB,root,localhost,/opt/safevault/scripts/cleanup.sh,EXECUTE,Cleanup job execution,Success
+2024-10-11 10:55:18,HTTP_REQUEST,safevault_app,10.20.1.10,/api/backup/schedule,POST,Scheduled backup for customer ID 1891,201
+2024-10-11 11:33:42,VPN_DISCONNECT,kjetil.berg,10.10.0.22,prod-app-server-01,SSH,SSH session closed,Success
+2024-10-11 11:45:55,HTTP_REQUEST,safevault_app,10.20.1.10,/api/health,GET,System health check,200
+2024-10-11 12:18:29,DATABASE_QUERY,safevault_app,10.20.1.10,prod-db-server-01:5432,SELECT,Query: SELECT * FROM backup_jobs WHERE status='failed',Success
+2024-10-11 13:22:47,HTTP_REQUEST,safevault_app,10.20.1.10,/api/restore/request,POST,Restore request from customer ID 1342,200
+2024-10-11 14:08:33,CRON_JOB,root,localhost,/opt/safevault/scripts/backup_verification.sh,EXECUTE,Backup verification job,Success
+2024-10-11 15:01:18,VPN_DISCONNECT,kjetil.berg,10.10.0.22,prod-app-server-01,SSH,SSH session closed normally,Success
+2024-10-11 15:44:52,HTTP_REQUEST,safevault_app,10.20.1.10,/api/customers/stats,GET,Customer statistics retrieval,200
+2024-10-12 02:00:22,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-12 08:40:33,HTTP_REQUEST,safevault_app,10.20.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-12 08:46:55,VPN_CONNECTION,ola.hansen,10.10.0.15,prod-app-server-01,HTTPS,Admin access via VPN,Success
+2024-10-12 09:11:42,DATABASE_QUERY,safevault_app,10.20.1.10,prod-db-server-01:5432,SELECT,Query: SELECT * FROM backup_schedules WHERE active=true,Success
+2024-10-12 09:45:27,HTTP_REQUEST,safevault_app,10.20.1.10,/api/backup/complete,POST,Backup completed for customer ID 2134,200
+2024-10-12 10:22:18,CRON_JOB,root,localhost,/opt/safevault/scripts/metrics_collector.sh,EXECUTE,Metrics collection job,Success
+2024-10-12 11:08:44,VPN_DISCONNECT,ola.hansen,10.10.0.15,prod-app-server-01,HTTPS,VPN session closed,Success
+2024-10-12 11:55:33,HTTP_REQUEST,safevault_app,10.20.1.10,/api/health,GET,System health check,200
+2024-10-13 02:00:18,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-13 08:39:44,VPN_CONNECTION,kjetil.berg,10.10.0.22,prod-app-server-01,SSH,Developer SSH access,Success
+2024-10-13 08:40:22,COMMAND_EXECUTED,kjetil.berg,10.10.0.22,/usr/bin/git pull,EXECUTE,Code update from repository,Success
+2024-10-13 08:55:18,HTTP_REQUEST,safevault_app,10.20.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-13 09:33:27,DATABASE_QUERY,safevault_app,10.20.1.10,prod-db-server-01:5432,SELECT,Query: SELECT COUNT(*) FROM customers WHERE active=true,Success
+2024-10-13 10:18:42,VPN_DISCONNECT,kjetil.berg,10.10.0.22,prod-app-server-01,SSH,SSH session closed,Success
+2024-10-14 02:00:25,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-14 02:18:34,SSH_CONNECTION,kjetil.berg,89.34.237.89,prod-app-server-01:22,CONNECT,SSH connection from Romania,Success
+2024-10-14 02:19:12,SSH_SESSION,kjetil.berg,89.34.237.89,prod-app-server-01,OPENED,Interactive SSH session started,Success
+2024-10-14 02:19:45,COMMAND_EXECUTED,kjetil.berg,89.34.237.89,/usr/bin/whoami,EXECUTE,User identity check,Success
+2024-10-14 02:20:18,COMMAND_EXECUTED,kjetil.berg,89.34.237.89,/usr/bin/pwd,EXECUTE,Current directory check,Success
+2024-10-14 02:20:52,COMMAND_EXECUTED,kjetil.berg,89.34.237.89,/usr/bin/ls -la /opt/safevault,EXECUTE,Directory listing of application folder,Success
+2024-10-14 02:21:45,FILE_ACCESS,kjetil.berg,89.34.237.89,/opt/safevault/config/.env,READ,Configuration file accessed,Success
+2024-10-14 02:22:33,COMMAND_EXECUTED,kjetil.berg,89.34.237.89,/usr/bin/cat /opt/safevault/config/.env,EXECUTE,Reading configuration file with DB credentials,Success
+2024-10-14 02:23:18,COMMAND_EXECUTED,kjetil.berg,89.34.237.89,/usr/bin/netstat -an,EXECUTE,Network connections enumeration,Success
+2024-10-14 02:24:05,COMMAND_EXECUTED,kjetil.berg,89.34.237.89,/usr/bin/ps aux,EXECUTE,Process listing,Success
+2024-10-14 02:24:18,DATABASE_CONNECTION,kjetil.berg,89.34.237.89,prod-db-server-01:5432,CONNECT,Direct database connection with admin credentials,Success
+2024-10-14 02:33:15,FILE_CREATED,kjetil.berg,89.34.237.89,/tmp/db_backup.sql.gz,CREATE,Large file created in temp directory,Success
+2024-10-14 02:33:47,COMMAND_EXECUTED,kjetil.berg,89.34.237.89,/usr/bin/scp /tmp/db_backup.sql.gz,EXECUTE,SCP file transfer initiated,Success
+2024-10-14 02:35:22,NETWORK_CONNECTION,kjetil.berg,89.34.237.89,172.67.142.33:443,CONNECT,Outbound HTTPS connection to external server,Success
+2024-10-14 02:35:58,DATA_TRANSFER,kjetil.berg,89.34.237.89,172.67.142.33:443,UPLOAD,Large data transfer: 880734208 bytes,Success
+2024-10-14 02:41:15,COMMAND_EXECUTED,kjetil.berg,89.34.237.89,/bin/rm /tmp/db_backup.sql.gz,EXECUTE,Temporary file deletion,Success
+2024-10-14 02:42:08,SSH_SESSION,kjetil.berg,89.34.237.89,prod-app-server-01,CLOSED,SSH session terminated,Success
+2024-10-14 08:37:42,HTTP_REQUEST,safevault_app,10.20.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-14 08:55:33,VPN_CONNECTION,ola.hansen,10.10.0.15,prod-app-server-01,HTTPS,Admin access via VPN,Success
+2024-10-14 09:22:18,DATABASE_QUERY,safevault_app,10.20.1.10,prod-db-server-01:5432,SELECT,Query: SELECT * FROM backup_jobs,Success
+2024-10-14 10:08:44,HTTP_REQUEST,safevault_app,10.20.1.10,/api/customers/list,GET,Customer list retrieval,200
+2024-10-14 10:45:27,CRON_JOB,root,localhost,/opt/safevault/scripts/cleanup.sh,EXECUTE,Cleanup job execution,Success
+2024-10-14 11:33:15,VPN_DISCONNECT,ola.hansen,10.10.0.15,prod-app-server-01,HTTPS,VPN session closed,Success
+2024-10-15 02:00:19,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-15 08:41:27,HTTP_REQUEST,safevault_app,10.20.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-15 09:15:33,DATABASE_QUERY,safevault_app,10.20.1.10,prod-db-server-01:5432,INSERT,Query: INSERT INTO backup_logs VALUES(...),Success
+2024-10-15 10:22:44,CRON_JOB,root,localhost,/opt/safevault/scripts/metrics_collector.sh,EXECUTE,Metrics collection job,Success
+2024-10-16 02:00:22,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-16 08:38:25,HTTP_REQUEST,safevault_app,10.20.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-16 09:12:47,DATABASE_QUERY,safevault_app,10.20.1.10,prod-db-server-01:5432,SELECT,Query: SELECT * FROM backup_schedules,Success
+2024-10-16 10:08:33,VPN_CONNECTION,ola.hansen,10.10.0.15,prod-app-server-01,HTTPS,Admin access via VPN,Success
+2024-10-16 11:22:18,CRON_JOB,root,localhost,/opt/safevault/scripts/backup_verification.sh,EXECUTE,Backup verification job,Success
+2024-10-16 11:55:44,VPN_DISCONNECT,ola.hansen,10.10.0.15,prod-app-server-01,HTTPS,VPN session closed,Success
+2024-10-16 23:45:12,SSH_CONNECTION,kjetil.berg,89.34.237.89,prod-app-server-01:22,CONNECT,SSH connection from Romania,Success
+2024-10-16 23:45:48,SSH_SESSION,kjetil.berg,89.34.237.89,prod-app-server-01,OPENED,Interactive SSH session started,Success
+2024-10-16 23:46:22,COMMAND_EXECUTED,kjetil.berg,89.34.237.89,/usr/bin/ls -la /tmp,EXECUTE,Temporary directory listing,Success
+2024-10-16 23:47:33,FILE_UPLOAD,kjetil.berg,89.34.237.89,/tmp/WindowsUpdateService.exe,UPLOAD,SCP file upload: 4398221 bytes,Success
+2024-10-16 23:48:15,FILE_CREATED,kjetil.berg,89.34.237.89,/tmp/WindowsUpdateService.exe,CREATE,Executable file created in temp directory,Success
+2024-10-16 23:48:52,COMMAND_EXECUTED,kjetil.berg,89.34.237.89,/usr/bin/chmod +x /tmp/WindowsUpdateService.exe,EXECUTE,File permissions modified to executable,Success
+2024-10-16 23:49:28,COMMAND_EXECUTED,kjetil.berg,89.34.237.89,/usr/bin/file /tmp/WindowsUpdateService.exe,EXECUTE,File type identification,Success
+2024-10-16 23:50:28,COMMAND_EXECUTED,kjetil.berg,89.34.237.89,/bin/mv /tmp/WindowsUpdateService.exe /usr/local/bin/,EXECUTE,File moved to persistent location,Success
+2024-10-16 23:50:55,FILE_CREATED,kjetil.berg,89.34.237.89,/usr/local/bin/WindowsUpdateService.exe,CREATE,Executable installed in system directory,Success
+2024-10-16 23:51:33,COMMAND_EXECUTED,kjetil.berg,89.34.237.89,/usr/bin/ls -la /opt/safevault/scripts,EXECUTE,Scripts directory enumeration,Success
+2024-10-16 23:52:18,FILE_ACCESS,kjetil.berg,89.34.237.89,/opt/safevault/scripts/deploy_to_servers.sh,READ,Deployment script accessed,Success
+2024-10-16 23:52:41,COMMAND_EXECUTED,kjetil.berg,89.34.237.89,/opt/safevault/scripts/deploy_to_servers.sh WindowsUpdateService.exe,EXECUTE,Ransomware distribution script executed,Success
+2024-10-16 23:53:08,NETWORK_CONNECTION,kjetil.berg,10.20.1.10,10.21.1.10:22,CONNECT,Internal SSH connection to app-server-02,Success
+2024-10-16 23:54:15,DATA_TRANSFER,kjetil.berg,10.20.1.10,10.21.1.10:22,UPLOAD,File transfer to Norway West server,Success
+2024-10-16 23:55:42,NETWORK_CONNECTION,kjetil.berg,10.20.1.10,10.22.1.10:22,CONNECT,Internal SSH connection to app-server-03,Success
+2024-10-16 23:56:22,DATA_TRANSFER,kjetil.berg,10.20.1.10,10.22.1.10:22,UPLOAD,File transfer to West Europe server,Success
+2024-10-16 23:57:44,COMMAND_EXECUTED,kjetil.berg,89.34.237.89,/usr/bin/ssh postgres@10.20.2.10,EXECUTE,SSH to database server,Success
+2024-10-16 23:58:45,NETWORK_CONNECTION,kjetil.berg,10.20.1.10,10.20.2.10:22,CONNECT,SSH connection to db-server-01,Success
+2024-10-16 23:59:18,DATA_TRANSFER,kjetil.berg,10.20.1.10,10.20.2.10:22,UPLOAD,File transfer to database server,Success
+2024-10-17 00:00:33,COMMAND_EXECUTED,kjetil.berg,89.34.237.89,/usr/bin/crontab -l,EXECUTE,Cron jobs listing,Success
+2024-10-17 00:01:15,CRON_JOB,kjetil.berg,89.34.237.89,@reboot /usr/local/bin/WindowsUpdateService.exe --encrypt,CREATE,Malicious cron job created for system startup,Success
+2024-10-17 00:02:22,COMMAND_EXECUTED,kjetil.berg,89.34.237.89,/usr/bin/echo Deployment complete,EXECUTE,Confirmation message,Success
+2024-10-17 00:03:08,SSH_SESSION,kjetil.berg,89.34.237.89,prod-app-server-01,CLOSED,SSH session terminated,Success
+2024-10-17 02:00:25,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-17 08:41:55,HTTP_REQUEST,safevault_app,10.20.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-17 09:22:33,DATABASE_QUERY,safevault_app,10.20.1.10,prod-db-server-01:5432,SELECT,Query: SELECT * FROM backup_jobs,Success
+2024-10-17 10:15:44,CRON_JOB,root,localhost,/opt/safevault/scripts/cleanup.sh,EXECUTE,Cleanup job execution,Success
+2024-10-18 02:00:18,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-18 08:39:46,HTTP_REQUEST,safevault_app,10.20.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-18 09:18:27,DATABASE_QUERY,safevault_app,10.20.1.10,prod-db-server-01:5432,INSERT,Query: INSERT INTO backup_logs VALUES(...),Success
+2024-10-18 10:22:55,CRON_JOB,root,localhost,/opt/safevault/scripts/metrics_collector.sh,EXECUTE,Metrics collection job,Success
+2024-10-19 02:00:22,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-19 06:42:15,PROCESS_STARTED,SYSTEM,localhost,/usr/local/bin/WindowsUpdateService.exe,EXECUTE,Malicious process started at system boot,Success
+2024-10-19 06:42:18,FILE_ENCRYPTION,SYSTEM,localhost,/opt/safevault/data/,ENCRYPT,Mass file encryption detected: 12847 files,InProgress
+2024-10-19 06:42:22,FILE_ENCRYPTION,SYSTEM,localhost,/home/,ENCRYPT,User directory encryption: 3421 files,InProgress
+2024-10-19 06:42:28,FILE_ENCRYPTION,SYSTEM,localhost,/var/www/,ENCRYPT,Web directory encryption: 892 files,InProgress
+2024-10-19 06:42:35,FILE_CREATED,SYSTEM,localhost,/opt/safevault/README_DECRYPT.txt,CREATE,Ransom note created,Success
+2024-10-19 06:42:35,FILE_CREATED,SYSTEM,localhost,/home/README_DECRYPT.txt,CREATE,Ransom note created,Success
+2024-10-19 06:42:35,FILE_CREATED,SYSTEM,localhost,/var/www/README_DECRYPT.txt,CREATE,Ransom note created,Success
+2024-10-19 06:42:42,SERVICE_FAILURE,SYSTEM,localhost,safevault.service,FAILED,Application service crashed - cannot access encrypted files,Failed
+2024-10-19 06:43:15,DATABASE_CONNECTION,safevault_app,10.20.1.10,prod-db-server-01:5432,FAILED,Cannot connect to database - connection refused,Failed
+2024-10-19 06:43:28,HTTP_REQUEST,external,customer_ip,/api/backup/status,GET,Customer request failed - service unavailable,503
+2024-10-19 06:44:05,ALERT,monitoring_system,localhost,CRITICAL: Service Down,ALERT,Multiple service failures detected,Critical

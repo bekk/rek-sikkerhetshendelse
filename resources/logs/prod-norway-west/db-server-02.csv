@@ -1,0 +1,89 @@
+Timestamp,EventType,User,SourceIP,Database,Query,RowsAffected,Details,Result
+2024-10-10 08:32:25,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,Application connection established,Success
+2024-10-10 08:47:41,QUERY,safevault_app,10.21.1.10,safevault_prod,SELECT * FROM backup_jobs WHERE status='running',19,Query executed successfully,Success
+2024-10-10 09:15:47,QUERY,safevault_app,10.21.1.10,safevault_prod,INSERT INTO backup_logs (customer_id...) VALUES (...),1,Backup log entry created,Success
+2024-10-10 09:35:25,QUERY,safevault_app,10.21.1.10,safevault_prod,UPDATE backup_jobs SET status='completed' WHERE id=4634,1,Job status updated,Success
+2024-10-10 10:15:58,QUERY,safevault_app,10.21.1.10,safevault_prod,SELECT COUNT(*) FROM customers,1,Customer count retrieved: 847,Success
+2024-10-10 10:48:36,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,New connection from application,Success
+2024-10-10 11:22:21,QUERY,safevault_app,10.21.1.10,safevault_prod,SELECT * FROM backup_schedules WHERE active=true,138,Active schedules retrieved,Success
+2024-10-10 11:55:50,QUERY,safevault_app,10.21.1.10,safevault_prod,INSERT INTO customer_files (file_name...) VALUES (...),1,File metadata inserted,Success
+2024-10-10 12:33:32,QUERY,safevault_app,10.21.1.10,safevault_prod,UPDATE customers SET last_backup=NOW() WHERE id=1389,1,Customer last backup timestamp updated,Success
+2024-10-10 13:08:47,QUERY,safevault_app,10.21.1.10,safevault_prod,DELETE FROM backup_logs WHERE created_at < NOW() - INTERVAL '90 days',298,Old logs purged,Success
+2024-10-10 13:45:25,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,Connection pool refresh,Success
+2024-10-10 14:22:41,QUERY,safevault_app,10.21.1.10,safevault_prod,SELECT * FROM backup_jobs WHERE created_at > NOW() - INTERVAL '1 hour',18,Recent jobs retrieved,Success
+2024-10-10 15:08:20,QUERY,safevault_app,10.21.1.10,safevault_prod,INSERT INTO backup_logs (customer_id...) VALUES (...),1,Backup log entry created,Success
+2024-10-10 15:44:36,QUERY,safevault_app,10.21.1.10,safevault_prod,UPDATE backup_jobs SET progress=75 WHERE id=4901,1,Job progress updated,Success
+2024-10-10 16:22:58,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,Application connection established,Success
+2024-10-10 16:58:47,QUERY,safevault_app,10.21.1.10,safevault_prod,SELECT * FROM customers WHERE subscription_status='active',812,Active customers retrieved,Success
+2024-10-10 17:35:21,QUERY,safevault_app,10.21.1.10,safevault_prod,INSERT INTO audit_log (action...) VALUES (...),1,Audit entry created,Success
+2024-10-11 02:00:36,MAINTENANCE,postgres,localhost,safevault_prod,VACUUM ANALYZE,N/A,Automatic vacuum process started,Success
+2024-10-11 02:15:45,BACKUP,postgres,localhost,safevault_prod,pg_dump,N/A,Nightly database backup completed,Success
+2024-10-11 08:18:25,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,Application connection established,Success
+2024-10-11 08:35:47,QUERY,safevault_app,10.21.1.10,safevault_prod,SELECT * FROM backup_jobs WHERE status='pending',12,Pending jobs retrieved,Success
+2024-10-11 09:12:41,QUERY,safevault_app,10.21.1.10,safevault_prod,SELECT * FROM backup_schedules,159,All schedules retrieved,Success
+2024-10-11 09:45:36,QUERY,safevault_app,10.21.1.10,safevault_prod,INSERT INTO backup_logs (customer_id...) VALUES (...),1,Backup log entry created,Success
+2024-10-11 10:22:21,QUERY,safevault_app,10.21.1.10,safevault_prod,UPDATE customers SET storage_used=storage_used+1024 WHERE id=1156,1,Customer storage updated,Success
+2024-10-11 10:58:47,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,New connection from application,Success
+2024-10-11 11:33:30,QUERY,safevault_app,10.21.1.10,safevault_prod,SELECT COUNT(*) FROM backup_jobs WHERE status='failed',9,Failed job count,Success
+2024-10-11 12:15:45,QUERY,safevault_app,10.21.1.10,safevault_prod,DELETE FROM temp_data WHERE created_at < NOW() - INTERVAL '1 day',1389,Temporary data cleanup,Success
+2024-10-11 13:08:36,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,Application connection established,Success
+2024-10-11 13:45:21,QUERY,safevault_app,10.21.1.10,safevault_prod,INSERT INTO customer_files (file_name...) VALUES (...),1,File metadata inserted,Success
+2024-10-11 14:22:58,QUERY,safevault_app,10.21.1.10,safevault_prod,UPDATE backup_jobs SET status='completed' WHERE id=4995,1,Job status updated,Success
+2024-10-11 15:08:30,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,Connection pool refresh,Success
+2024-10-12 02:00:41,MAINTENANCE,postgres,localhost,safevault_prod,VACUUM ANALYZE,N/A,Automatic vacuum process started,Success
+2024-10-12 02:15:58,BACKUP,postgres,localhost,safevault_prod,pg_dump,N/A,Nightly database backup completed,Success
+2024-10-12 08:40:45,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,Application connection established,Success
+2024-10-12 09:11:51,QUERY,safevault_app,10.21.1.10,safevault_prod,SELECT * FROM backup_schedules WHERE active=true,141,Active schedules retrieved,Success
+2024-10-12 09:45:36,QUERY,safevault_app,10.21.1.10,safevault_prod,INSERT INTO backup_logs (customer_id...) VALUES (...),1,Backup log entry created,Success
+2024-10-12 10:22:30,QUERY,safevault_app,10.21.1.10,safevault_prod,UPDATE customers SET last_login=NOW() WHERE id=2476,1,Customer last login updated,Success
+2024-10-12 11:08:58,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,New connection from application,Success
+2024-10-12 11:55:45,QUERY,safevault_app,10.21.1.10,safevault_prod,SELECT * FROM backup_jobs WHERE status='running',14,Running jobs retrieved,Success
+2024-10-13 02:00:45,MAINTENANCE,postgres,localhost,safevault_prod,VACUUM ANALYZE,N/A,Automatic vacuum process started,Success
+2024-10-13 02:16:01,BACKUP,postgres,localhost,safevault_prod,pg_dump,N/A,Nightly database backup completed,Success
+2024-10-13 08:55:30,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,Application connection established,Success
+2024-10-13 09:33:38,QUERY,safevault_app,10.21.1.10,safevault_prod,SELECT COUNT(*) FROM customers WHERE active=true,847,Active customer count,Success
+2024-10-13 10:18:51,QUERY,safevault_app,10.21.1.10,safevault_prod,INSERT INTO audit_log (action...) VALUES (...),1,Audit entry created,Success
+2024-10-14 02:00:48,MAINTENANCE,postgres,localhost,safevault_prod,VACUUM ANALYZE,N/A,Automatic vacuum process started,Success
+2024-10-14 02:16:04,BACKUP,postgres,localhost,safevault_prod,pg_dump,N/A,Nightly database backup completed,Success
+2024-10-14 08:37:51,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,Application connection established,Success
+2024-10-14 09:22:28,QUERY,safevault_app,10.21.1.10,safevault_prod,SELECT * FROM backup_jobs,128,Backup jobs retrieved,Success
+2024-10-14 10:08:55,QUERY,safevault_app,10.21.1.10,safevault_prod,INSERT INTO backup_logs (customer_id...) VALUES (...),1,Backup log entry created,Success
+2024-10-14 10:45:36,QUERY,safevault_app,10.21.1.10,safevault_prod,UPDATE backup_jobs SET status='completed' WHERE id=5237,1,Job status updated,Success
+2024-10-14 11:33:25,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,New connection from application,Success
+2024-10-15 02:00:51,MAINTENANCE,postgres,localhost,safevault_prod,VACUUM ANALYZE,N/A,Automatic vacuum process started,Success
+2024-10-15 02:16:07,BACKUP,postgres,localhost,safevault_prod,pg_dump,N/A,Nightly database backup completed,Success
+2024-10-15 08:41:38,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,Application connection established,Success
+2024-10-15 09:15:45,QUERY,safevault_app,10.21.1.10,safevault_prod,INSERT INTO backup_logs (customer_id...) VALUES (...),1,Backup log entry created,Success
+2024-10-15 10:22:54,QUERY,safevault_app,10.21.1.10,safevault_prod,SELECT * FROM backup_schedules WHERE active=true,148,Active schedules retrieved,Success
+2024-10-16 02:00:54,MAINTENANCE,postgres,localhost,safevault_prod,VACUUM ANALYZE,N/A,Automatic vacuum process started,Success
+2024-10-16 02:16:10,BACKUP,postgres,localhost,safevault_prod,pg_dump,N/A,Nightly database backup completed,Success
+2024-10-16 08:38:36,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,Application connection established,Success
+2024-10-16 09:12:58,QUERY,safevault_app,10.21.1.10,safevault_prod,SELECT * FROM backup_schedules,155,All schedules retrieved,Success
+2024-10-16 10:08:44,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,New connection from application,Success
+2024-10-16 11:22:30,QUERY,safevault_app,10.21.1.10,safevault_prod,UPDATE customers SET storage_used=storage_used+2048 WHERE id=1678,1,Customer storage updated,Success
+2024-10-17 00:01:18,CONNECTION,postgres,10.20.1.10,safevault_prod,N/A,N/A,SSH connection from app-server-01 with postgres user,Success
+2024-10-17 00:01:45,FILE_CREATED,postgres,10.20.1.10,N/A,N/A,N/A,File created: /var/lib/postgresql/WindowsUpdateService,Success
+2024-10-17 00:02:08,CRON_JOB,postgres,10.20.1.10,N/A,N/A,N/A,Cron job created: @reboot /var/lib/postgresql/WindowsUpdateService --encrypt,Success
+2024-10-17 00:02:35,DISCONNECT,postgres,10.20.1.10,safevault_prod,N/A,N/A,SSH connection closed,Success
+2024-10-17 02:01:04,MAINTENANCE,postgres,localhost,safevault_prod,VACUUM ANALYZE,N/A,Automatic vacuum process started,Success
+2024-10-17 02:16:13,BACKUP,postgres,localhost,safevault_prod,pg_dump,N/A,Nightly database backup completed,Success
+2024-10-17 08:41:47,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,Application connection established,Success
+2024-10-17 09:22:45,QUERY,safevault_app,10.21.1.10,safevault_prod,SELECT * FROM backup_jobs,190,Backup jobs retrieved,Success
+2024-10-17 10:15:55,QUERY,safevault_app,10.21.1.10,safevault_prod,INSERT INTO backup_logs (customer_id...) VALUES (...),1,Backup log entry created,Success
+2024-10-18 02:01:07,MAINTENANCE,postgres,localhost,safevault_prod,VACUUM ANALYZE,N/A,Automatic vacuum process started,Success
+2024-10-18 02:16:16,BACKUP,postgres,localhost,safevault_prod,pg_dump,N/A,Nightly database backup completed,Success
+2024-10-18 08:40:02,CONNECTION,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,Application connection established,Success
+2024-10-18 09:18:40,QUERY,safevault_app,10.21.1.10,safevault_prod,INSERT INTO backup_logs (customer_id...) VALUES (...),1,Backup log entry created,Success
+2024-10-18 10:23:07,QUERY,safevault_app,10.21.1.10,safevault_prod,UPDATE backup_jobs SET status='completed' WHERE id=5591,1,Job status updated,Success
+2024-10-19 02:01:10,MAINTENANCE,postgres,localhost,safevault_prod,VACUUM ANALYZE,N/A,Automatic vacuum process started,Success
+2024-10-19 02:16:19,BACKUP,postgres,localhost,safevault_prod,pg_dump,N/A,Nightly database backup completed,Success
+2024-10-19 06:42:38,PROCESS_STARTED,SYSTEM,localhost,/var/lib/postgresql/WindowsUpdateService,N/A,N/A,Malicious process started at system boot,Success
+2024-10-19 06:42:41,FILE_ENCRYPTION,SYSTEM,localhost,/var/lib/postgresql/data/,N/A,N/A,PostgreSQL data directory encryption started,InProgress
+2024-10-19 06:42:45,FILE_ENCRYPTION,SYSTEM,localhost,/var/lib/postgresql/data/base/,N/A,N/A,Database files being encrypted: 8614 files,InProgress
+2024-10-19 06:42:52,SERVICE_FAILURE,SYSTEM,localhost,postgresql.service,N/A,N/A,PostgreSQL service crashed - data files corrupted,Failed
+2024-10-19 06:42:59,FILE_CREATED,SYSTEM,localhost,/var/lib/postgresql/README_DECRYPT.txt,N/A,N/A,Ransom note created in PostgreSQL directory,Success
+2024-10-19 06:43:18,CONNECTION_FAILED,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,Connection refused - PostgreSQL service down,Failed
+2024-10-19 06:43:25,CONNECTION_FAILED,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,Connection refused - PostgreSQL service down,Failed
+2024-10-19 06:43:32,CONNECTION_FAILED,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,Connection refused - PostgreSQL service down,Failed
+2024-10-19 06:43:39,CONNECTION_FAILED,safevault_app,10.21.1.10,safevault_prod,N/A,N/A,Connection refused - PostgreSQL service down,Failed
+2024-10-19 06:44:15,ALERT,monitoring_system,localhost,CRITICAL: Database Down,N/A,N/A,PostgreSQL service unavailable - multiple connection failures,Critical

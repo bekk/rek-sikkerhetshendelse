@@ -1,0 +1,63 @@
+Timestamp,Actor,Action,Target,TargetType,Details,SourceIP,Result
+2024-10-10 08:45:22,andreas.nilsen@nordavind.no,Update,Azure Subscription Settings,Subscription,Updated cost alerts threshold,10.0.1.134,Success
+2024-10-10 09:34:15,emma.berg@nordavind.no,Create,nordavind-dev-rg,Resource Group,Created new resource group for development,10.0.1.045,Success
+2024-10-10 10:22:38,kjetil.berg@nordavind.no,Update,prod-app-server-01,Virtual Machine,Updated VM tags: environment=production,10.0.1.087,Success
+2024-10-10 11:15:44,andreas.nilsen@nordavind.no,Update,Network Security Group,NSG,Modified inbound rule: Allow HTTPS,10.0.1.134,Success
+2024-10-10 12:33:17,emma.berg@nordavind.no,Read,Azure AD Users,Directory,Listed all users in directory,10.0.1.045,Success
+2024-10-10 13:45:29,kjetil.berg@nordavind.no,Create,backup-script-sa,Storage Account,Created storage account for backup scripts,10.0.1.087,Success
+2024-10-10 14:25:34,ola.hansen@nordavind.no,Read,Azure AD Users,Directory,Listed all users in directory,185.23.187.142,Success
+2024-10-10 14:28:19,ola.hansen@nordavind.no,Read,Azure AD Groups,Directory,Listed all group memberships,185.23.187.142,Success
+2024-10-10 14:31:47,ola.hansen@nordavind.no,Update,Block sign-ins from untrusted locations,Conditional Access Policy,DISABLED conditional access policy,185.23.187.142,Success
+2024-10-10 14:35:22,ola.hansen@nordavind.no,Export,Azure AD Users,Directory,Bulk user export performed - 85 users exported,185.23.187.142,Success
+2024-10-10 14:38:45,ola.hansen@nordavind.no,Read,Azure Subscriptions,Subscription,Listed all subscriptions and resources,185.23.187.142,Success
+2024-10-10 15:22:18,andreas.nilsen@nordavind.no,Update,prod-db-server-01,Virtual Machine,Applied security patches,10.0.1.134,Success
+2024-10-10 16:44:33,emma.berg@nordavind.no,Create,test-webapp-01,App Service,Created test web app instance,10.0.1.045,Success
+2024-10-11 08:52:15,andreas.nilsen@nordavind.no,Read,Azure Monitor Logs,Monitoring,Queried application insights data,10.0.1.134,Success
+2024-10-11 09:34:27,kjetil.berg@nordavind.no,Update,prod-app-server-02,Virtual Machine,Updated VM size: Standard_D4s_v3,10.0.1.087,Success
+2024-10-11 10:18:44,emma.berg@nordavind.no,Create,User: temp.consultant@nordavind.no,Azure AD User,Created temporary consultant account,10.0.1.045,Success
+2024-10-11 11:45:33,andreas.nilsen@nordavind.no,Update,SafeVault-NSG,Network Security Group,Modified outbound rules,10.0.1.134,Success
+2024-10-11 03:22:33,ola.hansen@nordavind.no,Read,Microsoft Graph API,API,Users.Read.All - Exported user details,89.34.237.89,Success
+2024-10-11 03:24:18,ola.hansen@nordavind.no,Read,Microsoft Graph API,API,Groups.Read.All - Exported group memberships,89.34.237.89,Success
+2024-10-11 03:26:54,ola.hansen@nordavind.no,Read,Microsoft Graph API,API,Directory.Read.All - Exported org structure,89.34.237.89,Success
+2024-10-11 13:22:47,emma.berg@nordavind.no,Delete,test-webapp-01,App Service,Deleted test web app after testing,10.0.1.045,Success
+2024-10-11 14:55:18,andreas.nilsen@nordavind.no,Update,Azure Backup Policy,Backup,Modified backup retention from 30 to 90 days,10.0.1.134,Success
+2024-10-11 15:43:08,kjetil.berg@nordavind.no,Read,Virtual Machine Resources,Virtual Machine,Listed all VM configurations,89.34.237.89,Success
+2024-10-11 16:02:37,mari.hansen@nordavind.no,Read,SharePoint Site: Customer Documents,SharePoint,Accessed customer documents folder,89.34.237.91,Success
+2024-10-11 16:34:52,emma.berg@nordavind.no,Create,dev-database-01,SQL Database,Created development database instance,10.0.1.045,Success
+2024-10-12 08:33:29,andreas.nilsen@nordavind.no,Update,Azure Key Vault,Key Vault,Rotated storage account keys,10.0.1.134,Success
+2024-10-12 09:47:15,kjetil.berg@nordavind.no,Read,Virtual Network Configuration,Network,Reviewed VNet peering settings,10.0.1.087,Success
+2024-10-12 10:55:38,emma.berg@nordavind.no,Update,Azure AD Group: Developers,Group,Added new member to developers group,10.0.1.045,Success
+2024-10-12 13:22:44,andreas.nilsen@nordavind.no,Create,Diagnostic Settings,Monitoring,Enabled diagnostic logging for VMs,10.0.1.134,Success
+2024-10-12 15:18:27,kjetil.berg@nordavind.no,Update,prod-app-server-01,Virtual Machine,Restarted VM for maintenance,10.0.1.087,Success
+2024-10-13 08:44:33,emma.berg@nordavind.no,Read,Azure Cost Management,Billing,Generated cost analysis report,10.0.1.045,Success
+2024-10-13 10:29:18,andreas.nilsen@nordavind.no,Update,Azure Firewall Rules,Firewall,Updated firewall rule priority,10.0.1.134,Success
+2024-10-13 12:15:47,kjetil.berg@nordavind.no,Create,staging-environment,Resource Group,Created staging resource group,10.0.1.087,Success
+2024-10-13 14:33:52,emma.berg@nordavind.no,Update,Azure AD User: temp.consultant@nordavind.no,User,Extended account expiration date,10.0.1.045,Success
+2024-10-13 16:28:15,andreas.nilsen@nordavind.no,Read,Azure Security Center,Security,Reviewed security recommendations,10.0.1.134,Success
+2024-10-14 08:55:27,emma.berg@nordavind.no,Update,Application Insights,Monitoring,Modified sampling rate to 50%,10.0.1.045,Success
+2024-10-14 10:42:38,andreas.nilsen@nordavind.no,Create,Alert Rule: High CPU Usage,Monitoring,Created alert for CPU > 80%,10.0.1.134,Success
+2024-10-14 12:18:44,kjetil.berg@nordavind.no,Update,Load Balancer Configuration,Load Balancer,Updated backend pool settings,10.0.1.087,Success
+2024-10-14 14:37:22,emma.berg@nordavind.no,Read,Azure Resource Health,Health,Checked resource health status,10.0.1.045,Success
+2024-10-14 16:52:15,andreas.nilsen@nordavind.no,Update,Azure Policy,Policy,Enforced tag requirements on resources,10.0.1.134,Success
+2024-10-15 08:38:44,emma.berg@nordavind.no,Create,automation-runbook-backup,Automation,Created backup automation runbook,10.0.1.045,Success
+2024-10-15 10:25:33,andreas.nilsen@nordavind.no,Update,Virtual Network Gateway,VPN,Updated VPN gateway SKU,10.0.1.134,Success
+2024-10-15 12:44:18,kjetil.berg@nordavind.no,Read,Azure DevOps Pipelines,DevOps,Reviewed CI/CD pipeline configurations,10.0.1.087,Success
+2024-10-15 14:15:47,emma.berg@nordavind.no,Update,Azure AD Group: IT Admins,Group,Removed inactive member from group,10.0.1.045,Success
+2024-10-15 16:33:29,andreas.nilsen@nordavind.no,Create,Log Analytics Workspace,Monitoring,Created new workspace for centralized logs,10.0.1.134,Success
+2024-10-16 08:47:22,emma.berg@nordavind.no,Read,Azure Advisor Recommendations,Advisor,Reviewed cost optimization recommendations,10.0.1.045,Success
+2024-10-16 10:34:55,andreas.nilsen@nordavind.no,Update,Azure SQL Database,Database,Scaled database to higher tier,10.0.1.134,Success
+2024-10-16 12:28:38,kjetil.berg@nordavind.no,Create,Function App: data-processor,Function,Created Azure function for data processing,10.0.1.087,Success
+2024-10-16 14:52:17,emma.berg@nordavind.no,Update,Storage Account Replication,Storage,Changed replication from LRS to GRS,10.0.1.045,Success
+2024-10-16 16:45:33,andreas.nilsen@nordavind.no,Read,Azure Service Health,Health,Checked for service incidents,10.0.1.134,Success
+2024-10-17 08:41:28,emma.berg@nordavind.no,Update,Azure AD Conditional Access,Policy,Updated MFA requirements for admins,10.0.1.045,Success
+2024-10-17 10:55:42,andreas.nilsen@nordavind.no,Create,Snapshot: prod-db-server-01,Snapshot,Created database snapshot for backup,10.0.1.134,Success
+2024-10-17 12:33:18,kjetil.berg@nordavind.no,Update,Azure Container Registry,Container,Pushed new container image v2.3.1,10.0.1.087,Success
+2024-10-17 14:18:55,emma.berg@nordavind.no,Read,Azure Role Assignments,RBAC,Reviewed role-based access control,10.0.1.045,Success
+2024-10-17 16:27:44,andreas.nilsen@nordavind.no,Update,Azure Traffic Manager,Network,Modified routing method to performance,10.0.1.134,Success
+2024-10-18 08:36:33,emma.berg@nordavind.no,Create,Alert Rule: Failed Logins,Security,Created alert for failed login attempts,10.0.1.045,Success
+2024-10-18 10:48:27,andreas.nilsen@nordavind.no,Update,Azure Application Gateway,Network,Updated WAF rules,10.0.1.134,Success
+2024-10-18 12:22:55,kjetil.berg@nordavind.no,Read,Kubernetes Cluster Status,AKS,Checked cluster health and node status,10.0.1.087,Success
+2024-10-18 14:55:18,emma.berg@nordavind.no,Update,Azure AD Password Policy,Policy,Increased password complexity requirements,10.0.1.045,Success
+2024-10-18 16:38:42,andreas.nilsen@nordavind.no,Create,Recovery Services Vault,Backup,Created vault for VM backups,10.0.1.134,Success
+2024-10-19 08:29:47,emma.berg@nordavind.no,Read,Azure Compliance Dashboard,Compliance,Generated compliance report,10.0.1.045,Success
+2024-10-19 10:15:33,andreas.nilsen@nordavind.no,Update,Azure DNS Zone,DNS,Added new A record for subdomain,10.0.1.134,Success

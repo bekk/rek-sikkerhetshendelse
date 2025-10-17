@@ -1,0 +1,132 @@
+Timestamp,EventType,SourceIP,SourceUser,DestIP,DestDomain,DestPort,Protocol,Action,BytesTransferred,Details
+2024-10-10 08:12:18,DNS_QUERY,10.0.1.023,lars.olsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: outlook.office365.com
+2024-10-10 08:12:34,HTTPS,10.0.1.023,lars.olsen,52.96.148.162,outlook.office365.com,443,HTTPS,ALLOW,45823,Office 365 access
+2024-10-10 08:15:22,DNS_QUERY,10.0.1.045,emma.berg,8.8.8.8,-,53,DNS,ALLOW,-,Query: portal.azure.com
+2024-10-10 08:15:42,HTTPS,10.0.1.045,emma.berg,20.190.145.23,portal.azure.com,443,HTTPS,ALLOW,128445,Azure Portal access
+2024-10-10 08:18:05,DNS_QUERY,10.0.1.067,thomas.hansen,8.8.8.8,-,53,DNS,ALLOW,-,Query: github.com
+2024-10-10 08:18:15,HTTPS,10.0.1.067,thomas.hansen,140.82.121.3,github.com,443,HTTPS,ALLOW,234567,GitHub repository access
+2024-10-10 08:21:03,VPN_AUTH,10.0.1.142,ola.hansen,VPN_GATEWAY,-,1194,VPN,SUCCESS,0,VPN connection successful - assigned IP 10.10.0.15
+2024-10-10 08:21:45,DNS_QUERY,10.0.1.089,sofie.andersen,8.8.8.8,-,53,DNS,ALLOW,-,Query: teams.microsoft.com
+2024-10-10 08:24:56,HTTPS,10.0.1.034,kristian.jensen,13.107.42.14,sharepoint.com,443,HTTPS,ALLOW,67234,SharePoint access
+2024-10-10 08:28:33,DNS_QUERY,10.0.1.112,maria.larsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: office.com
+2024-10-10 08:32:12,VPN_TRAFFIC,10.10.0.15,ola.hansen,10.20.1.10,prod-app-server-01.norwayeast,443,HTTPS,ALLOW,45231,Azure resource access via VPN
+2024-10-10 08:35:28,DNS_QUERY,10.0.1.156,ingrid.pedersen,8.8.8.8,-,53,DNS,ALLOW,-,Query: outlook.office365.com
+2024-10-10 08:39:15,HTTPS,10.0.1.178,henrik.christensen,52.113.194.132,teams.microsoft.com,443,HTTPS,ALLOW,89234,Teams access
+2024-10-10 08:42:44,DNS_QUERY,10.0.1.192,julie.martinsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: office365.com
+2024-10-10 08:46:09,VPN_TRAFFIC,10.10.0.15,ola.hansen,10.20.2.10,prod-db-server-01.norwayeast,5432,PostgreSQL,ALLOW,12847,Database access via VPN
+2024-10-10 08:49:22,DNS_QUERY,10.0.1.221,anna.johansen,8.8.8.8,-,53,DNS,ALLOW,-,Query: onedrive.live.com
+2024-10-10 08:52:36,HTTPS,10.0.1.243,ole.eriksen,52.113.194.132,teams.microsoft.com,443,HTTPS,ALLOW,72344,Teams access
+2024-10-10 09:15:44,DNS_QUERY,10.0.1.087,kjetil.berg,8.8.8.8,-,53,DNS,ALLOW,-,Query: portal.azure.com
+2024-10-10 09:23:08,HTTPS,10.0.1.087,kjetil.berg,20.190.145.23,portal.azure.com,443,HTTPS,ALLOW,156789,Azure Portal access
+2024-10-10 10:12:33,DNS_QUERY,10.0.1.045,emma.berg,8.8.8.8,-,53,DNS,ALLOW,-,Query: stackoverflow.com
+2024-10-10 10:34:27,HTTPS,10.0.1.067,thomas.hansen,151.101.1.69,stackoverflow.com,443,HTTPS,ALLOW,34567,Stack Overflow access
+2024-10-10 11:23:18,VPN_TRAFFIC,10.10.0.15,ola.hansen,10.21.1.10,prod-app-server-02.norwaywest,443,HTTPS,ALLOW,38945,Azure resource access via VPN
+2024-10-10 12:15:44,DNS_QUERY,10.0.1.134,andreas.nilsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: portal.azure.com
+2024-10-10 12:34:09,HTTPS,10.0.1.023,lars.olsen,13.107.42.14,sharepoint.com,443,HTTPS,ALLOW,89234,SharePoint access
+2024-10-10 13:45:22,VPN_TRAFFIC,10.10.0.15,ola.hansen,10.22.1.10,prod-app-server-03.westeurope,443,HTTPS,ALLOW,42156,Azure resource access via VPN
+2024-10-10 14:04:33,DNS_QUERY,10.0.1.142,ola.hansen,185.142.67.23,microsoft-login-secure.com,53,DNS,ALLOW,-,SUSPICIOUS: Query to microsoft-login-secure.com (typo domain)
+2024-10-10 14:04:38,HTTPS,10.0.1.142,ola.hansen,185.142.67.23,microsoft-login-secure.com,443,HTTPS,ALLOW,12456,SUSPICIOUS: HTTPS to phishing domain
+2024-10-10 14:04:52,HTTPS,10.0.1.142,ola.hansen,185.142.67.23,microsoft-login-secure.com,443,HTTPS,ALLOW,3421,SUSPICIOUS: POST request to phishing domain (credentials submission)
+2024-10-10 14:28:45,DNS_QUERY,10.0.1.089,sofie.andersen,8.8.8.8,-,53,DNS,ALLOW,-,Query: outlook.office365.com
+2024-10-10 14:45:18,HTTPS,10.0.1.034,kristian.jensen,20.190.145.23,portal.azure.com,443,HTTPS,ALLOW,145678,Azure Portal access
+2024-10-10 15:12:33,DNS_QUERY,10.0.1.112,maria.larsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: teams.microsoft.com
+2024-10-10 15:34:08,HTTPS,10.0.1.134,andreas.nilsen,13.107.42.14,sharepoint.com,443,HTTPS,ALLOW,234567,SharePoint access
+2024-10-10 16:08:09,DNS_QUERY,10.0.1.156,ingrid.pedersen,8.8.8.8,-,53,DNS,ALLOW,-,Query: office365.com
+2024-10-10 16:23:38,HTTPS,10.0.1.178,henrik.christensen,20.190.145.23,portal.azure.com,443,HTTPS,ALLOW,98234,Azure Portal access
+2024-10-10 16:45:27,VPN_DISCONNECT,10.0.1.142,ola.hansen,VPN_GATEWAY,-,1194,VPN,SUCCESS,0,VPN session closed by user
+2024-10-10 17:12:22,DNS_QUERY,10.0.1.205,martin.sorensen,8.8.8.8,-,53,DNS,ALLOW,-,Query: teams.microsoft.com
+2024-10-10 17:34:44,HTTPS,10.0.1.221,anna.johansen,52.96.148.162,outlook.office365.com,443,HTTPS,ALLOW,56789,Office 365 access
+2024-10-10 17:52:09,DNS_QUERY,10.0.1.243,ole.eriksen,8.8.8.8,-,53,DNS,ALLOW,-,Query: sharepoint.com
+2024-10-11 08:08:15,DNS_QUERY,10.0.1.023,lars.olsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: outlook.office365.com
+2024-10-11 08:14:22,HTTPS,10.0.1.045,emma.berg,20.190.145.23,portal.azure.com,443,HTTPS,ALLOW,134567,Azure Portal access
+2024-10-11 08:19:38,VPN_AUTH,10.0.1.087,kjetil.berg,VPN_GATEWAY,-,1194,VPN,SUCCESS,0,VPN connection successful - assigned IP 10.10.0.22
+2024-10-11 08:25:09,DNS_QUERY,10.0.1.089,sofie.andersen,8.8.8.8,-,53,DNS,ALLOW,-,Query: teams.microsoft.com
+2024-10-11 08:31:33,HTTPS,10.0.1.034,kristian.jensen,13.107.42.14,sharepoint.com,443,HTTPS,ALLOW,78234,SharePoint access
+2024-10-11 08:37:44,VPN_TRAFFIC,10.10.0.22,kjetil.berg,10.20.1.10,prod-app-server-01.norwayeast,22,SSH,ALLOW,5643,SSH access to production app server
+2024-10-11 08:43:19,DNS_QUERY,10.0.1.134,andreas.nilsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: portal.azure.com
+2024-10-11 08:49:08,HTTPS,10.0.1.156,mari.hansen,52.96.148.162,outlook.office365.com,443,HTTPS,ALLOW,67234,Office 365 access
+2024-10-11 08:54:29,DNS_QUERY,10.0.1.178,henrik.christensen,8.8.8.8,-,53,DNS,ALLOW,-,Query: teams.microsoft.com
+2024-10-11 09:01:15,HTTPS,10.0.1.192,julie.martinsen,52.96.148.162,outlook.office365.com,443,HTTPS,ALLOW,45678,Office 365 access
+2024-10-11 09:08:38,VPN_TRAFFIC,10.10.0.22,kjetil.berg,10.20.2.10,prod-db-server-01.norwayeast,5432,PostgreSQL,ALLOW,8934,Database access via VPN
+2024-10-11 09:16:24,DNS_QUERY,10.0.1.221,anna.johansen,8.8.8.8,-,53,DNS,ALLOW,-,Query: office365.com
+2024-10-11 10:12:37,DNS_QUERY,10.0.1.243,ole.eriksen,8.8.8.8,-,53,DNS,ALLOW,-,Query: teams.microsoft.com
+2024-10-11 10:34:15,HTTPS,10.0.1.087,lise.hansen,13.107.42.14,sharepoint.com,443,HTTPS,ALLOW,89234,SharePoint access
+2024-10-11 11:15:29,DNS_QUERY,10.0.1.101,per.nielsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: portal.azure.com
+2024-10-11 11:45:08,VPN_TRAFFIC,10.10.0.22,kjetil.berg,10.21.1.10,prod-app-server-02.norwaywest,443,HTTPS,ALLOW,34567,Azure resource access via VPN
+2024-10-11 12:22:36,DNS_QUERY,10.0.1.145,bjorn.andersen,8.8.8.8,-,53,DNS,ALLOW,-,Query: github.com
+2024-10-11 13:08:25,HTTPS,10.0.1.167,silje.jensen,52.113.194.132,teams.microsoft.com,443,HTTPS,ALLOW,72344,Teams access
+2024-10-11 13:45:48,DNS_QUERY,10.0.1.189,erik.larsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: outlook.office365.com
+2024-10-11 14:23:05,HTTPS,10.0.1.023,lars.olsen,13.107.42.14,sharepoint.com,443,HTTPS,ALLOW,134567,SharePoint access
+2024-10-11 15:01:29,VPN_DISCONNECT,10.0.1.087,kjetil.berg,VPN_GATEWAY,-,1194,VPN,SUCCESS,0,VPN session closed by user
+2024-10-11 16:12:38,DNS_QUERY,10.0.1.067,thomas.hansen,8.8.8.8,-,53,DNS,ALLOW,-,Query: office365.com
+2024-10-11 16:34:22,HTTPS,10.0.1.089,sofie.andersen,52.113.194.132,teams.microsoft.com,443,HTTPS,ALLOW,67234,Teams access
+2024-10-11 17:08:09,DNS_QUERY,10.0.1.034,kristian.jensen,8.8.8.8,-,53,DNS,ALLOW,-,Query: portal.azure.com
+2024-10-11 17:45:26,HTTPS,10.0.1.112,maria.larsen,52.96.148.162,outlook.office365.com,443,HTTPS,ALLOW,56789,Office 365 access
+2024-10-12 08:11:17,DNS_QUERY,10.0.1.023,lars.olsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: outlook.office365.com
+2024-10-12 08:16:38,HTTPS,10.0.1.045,emma.berg,20.190.145.23,portal.azure.com,443,HTTPS,ALLOW,145678,Azure Portal access
+2024-10-12 08:22:29,VPN_AUTH,10.0.1.142,ola.hansen,VPN_GATEWAY,-,1194,VPN,SUCCESS,0,VPN connection successful - assigned IP 10.10.0.15
+2024-10-12 08:28:44,DNS_QUERY,10.0.1.089,sofie.andersen,8.8.8.8,-,53,DNS,ALLOW,-,Query: teams.microsoft.com
+2024-10-12 08:34:09,HTTPS,10.0.1.034,kristian.jensen,13.107.42.14,sharepoint.com,443,HTTPS,ALLOW,89234,SharePoint access
+2024-10-12 08:40:25,VPN_TRAFFIC,10.10.0.15,ola.hansen,10.20.1.10,prod-app-server-01.norwayeast,443,HTTPS,ALLOW,41256,Azure resource access via VPN
+2024-10-12 08:46:39,DNS_QUERY,10.0.1.134,andreas.nilsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: portal.azure.com
+2024-10-12 08:52:15,HTTPS,10.0.1.156,mari.hansen,52.96.148.162,outlook.office365.com,443,HTTPS,ALLOW,67234,Office 365 access
+2024-10-12 08:58:08,DNS_QUERY,10.0.1.178,henrik.christensen,8.8.8.8,-,53,DNS,ALLOW,-,Query: teams.microsoft.com
+2024-10-12 09:04:29,HTTPS,10.0.1.192,julie.martinsen,52.96.148.162,outlook.office365.com,443,HTTPS,ALLOW,45678,Office 365 access
+2024-10-12 09:11:36,VPN_TRAFFIC,10.10.0.15,ola.hansen,10.20.2.10,prod-db-server-01.norwayeast,5432,PostgreSQL,ALLOW,9234,Database access via VPN
+2024-10-13 08:09:08,DNS_QUERY,10.0.1.023,lars.olsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: outlook.office365.com
+2024-10-13 08:15:35,HTTPS,10.0.1.045,emma.berg,20.190.145.23,portal.azure.com,443,HTTPS,ALLOW,123456,Azure Portal access
+2024-10-13 08:21:19,VPN_AUTH,10.0.1.087,kjetil.berg,VPN_GATEWAY,-,1194,VPN,SUCCESS,0,VPN connection successful - assigned IP 10.10.0.22
+2024-10-13 08:27:46,DNS_QUERY,10.0.1.089,sofie.andersen,8.8.8.8,-,53,DNS,ALLOW,-,Query: teams.microsoft.com
+2024-10-13 08:33:09,HTTPS,10.0.1.034,kristian.jensen,13.107.42.14,sharepoint.com,443,HTTPS,ALLOW,78234,SharePoint access
+2024-10-13 08:39:37,VPN_TRAFFIC,10.10.0.22,kjetil.berg,10.20.1.10,prod-app-server-01.norwayeast,22,SSH,ALLOW,6124,SSH access to production app server
+2024-10-13 08:45:15,DNS_QUERY,10.0.1.134,andreas.nilsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: portal.azure.com
+2024-10-13 08:51:29,HTTPS,10.0.1.156,mari.hansen,52.96.148.162,outlook.office365.com,443,HTTPS,ALLOW,56789,Office 365 access
+2024-10-14 08:07:37,DNS_QUERY,10.0.1.023,lars.olsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: outlook.office365.com
+2024-10-14 08:13:18,HTTPS,10.0.1.045,emma.berg,20.190.145.23,portal.azure.com,443,HTTPS,ALLOW,134567,Azure Portal access
+2024-10-14 08:19:44,VPN_AUTH,10.0.1.142,ola.hansen,VPN_GATEWAY,-,1194,VPN,SUCCESS,0,VPN connection successful - assigned IP 10.10.0.15
+2024-10-14 08:25:31,DNS_QUERY,10.0.1.089,sofie.andersen,8.8.8.8,-,53,DNS,ALLOW,-,Query: teams.microsoft.com
+2024-10-14 08:31:08,HTTPS,10.0.1.034,kristian.jensen,13.107.42.14,sharepoint.com,443,HTTPS,ALLOW,89234,SharePoint access
+2024-10-14 08:37:35,VPN_TRAFFIC,10.10.0.15,ola.hansen,10.20.1.10,prod-app-server-01.norwayeast,443,HTTPS,ALLOW,39845,Azure resource access via VPN
+2024-10-14 08:43:21,DNS_QUERY,10.0.1.134,andreas.nilsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: portal.azure.com
+2024-10-14 08:49:08,VPN_AUTH,10.0.1.087,kjetil.berg,VPN_GATEWAY,-,1194,VPN,SUCCESS,0,VPN connection successful - assigned IP 10.10.0.22
+2024-10-14 08:55:26,HTTPS,10.0.1.156,mari.hansen,52.96.148.162,outlook.office365.com,443,HTTPS,ALLOW,67234,Office 365 access
+2024-10-15 08:10:15,DNS_QUERY,10.0.1.023,lars.olsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: outlook.office365.com
+2024-10-15 08:16:38,HTTPS,10.0.1.045,emma.berg,20.190.145.23,portal.azure.com,443,HTTPS,ALLOW,123456,Azure Portal access
+2024-10-15 08:22:11,VPN_AUTH,10.0.1.067,thomas.hansen,VPN_GATEWAY,-,1194,VPN,SUCCESS,0,VPN connection successful - assigned IP 10.10.0.08
+2024-10-15 08:28:37,DNS_QUERY,10.0.1.089,sofie.andersen,8.8.8.8,-,53,DNS,ALLOW,-,Query: teams.microsoft.com
+2024-10-15 08:34:45,HTTPS,10.0.1.034,kristian.jensen,13.107.42.14,sharepoint.com,443,HTTPS,ALLOW,78234,SharePoint access
+2024-10-15 08:41:19,VPN_TRAFFIC,10.10.0.08,thomas.hansen,10.20.1.10,prod-app-server-01.norwayeast,443,HTTPS,ALLOW,37654,Azure resource access via VPN
+2024-10-15 08:47:26,DNS_QUERY,10.0.1.134,andreas.nilsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: portal.azure.com
+2024-10-15 08:53:11,HTTPS,10.0.1.156,mari.hansen,52.96.148.162,outlook.office365.com,443,HTTPS,ALLOW,56789,Office 365 access
+2024-10-16 08:08:28,DNS_QUERY,10.0.1.023,lars.olsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: outlook.office365.com
+2024-10-16 08:14:45,HTTPS,10.0.1.045,emma.berg,20.190.145.23,portal.azure.com,443,HTTPS,ALLOW,134567,Azure Portal access
+2024-10-16 08:20:31,VPN_AUTH,10.0.1.142,ola.hansen,VPN_GATEWAY,-,1194,VPN,SUCCESS,0,VPN connection successful - assigned IP 10.10.0.15
+2024-10-16 08:26:08,DNS_QUERY,10.0.1.089,sofie.andersen,8.8.8.8,-,53,DNS,ALLOW,-,Query: teams.microsoft.com
+2024-10-16 08:32:37,HTTPS,10.0.1.034,kristian.jensen,13.107.42.14,sharepoint.com,443,HTTPS,ALLOW,89234,SharePoint access
+2024-10-16 08:38:19,VPN_TRAFFIC,10.10.0.15,ola.hansen,10.20.1.10,prod-app-server-01.norwayeast,443,HTTPS,ALLOW,40123,Azure resource access via VPN
+2024-10-16 08:44:46,DNS_QUERY,10.0.1.134,andreas.nilsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: portal.azure.com
+2024-10-16 08:50:31,VPN_AUTH,10.0.1.087,kjetil.berg,VPN_GATEWAY,-,1194,VPN,SUCCESS,0,VPN connection successful - assigned IP 10.10.0.22
+2024-10-16 08:56:15,HTTPS,10.0.1.156,mari.hansen,52.96.148.162,outlook.office365.com,443,HTTPS,ALLOW,67234,Office 365 access
+2024-10-17 08:11:41,DNS_QUERY,10.0.1.023,lars.olsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: outlook.office365.com
+2024-10-17 08:17:26,HTTPS,10.0.1.045,emma.berg,20.190.145.23,portal.azure.com,443,HTTPS,ALLOW,123456,Azure Portal access
+2024-10-17 08:23:12,VPN_AUTH,10.0.1.067,thomas.hansen,VPN_GATEWAY,-,1194,VPN,SUCCESS,0,VPN connection successful - assigned IP 10.10.0.08
+2024-10-17 08:29:35,DNS_QUERY,10.0.1.089,sofie.andersen,8.8.8.8,-,53,DNS,ALLOW,-,Query: teams.microsoft.com
+2024-10-17 08:35:21,HTTPS,10.0.1.034,kristian.jensen,13.107.42.14,sharepoint.com,443,HTTPS,ALLOW,78234,SharePoint access
+2024-10-17 08:41:48,VPN_TRAFFIC,10.10.0.08,thomas.hansen,10.21.1.10,prod-app-server-02.norwaywest,443,HTTPS,ALLOW,35674,Azure resource access via VPN
+2024-10-17 08:47:37,DNS_QUERY,10.0.1.134,andreas.nilsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: portal.azure.com
+2024-10-17 08:53:15,HTTPS,10.0.1.156,mari.hansen,52.96.148.162,outlook.office365.com,443,HTTPS,ALLOW,56789,Office 365 access
+2024-10-18 08:09:20,DNS_QUERY,10.0.1.023,lars.olsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: outlook.office365.com
+2024-10-18 08:15:37,HTTPS,10.0.1.045,emma.berg,20.190.145.23,portal.azure.com,443,HTTPS,ALLOW,134567,Azure Portal access
+2024-10-18 08:21:29,VPN_AUTH,10.0.1.142,ola.hansen,VPN_GATEWAY,-,1194,VPN,SUCCESS,0,VPN connection successful - assigned IP 10.10.0.15
+2024-10-18 08:27:45,DNS_QUERY,10.0.1.089,sofie.andersen,8.8.8.8,-,53,DNS,ALLOW,-,Query: teams.microsoft.com
+2024-10-18 08:33:21,HTTPS,10.0.1.034,kristian.jensen,13.107.42.14,sharepoint.com,443,HTTPS,ALLOW,89234,SharePoint access
+2024-10-18 08:39:38,VPN_TRAFFIC,10.10.0.15,ola.hansen,10.20.1.10,prod-app-server-01.norwayeast,443,HTTPS,ALLOW,38456,Azure resource access via VPN
+2024-10-18 08:45:33,DNS_QUERY,10.0.1.134,andreas.nilsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: portal.azure.com
+2024-10-18 08:51:21,VPN_AUTH,10.0.1.087,kjetil.berg,VPN_GATEWAY,-,1194,VPN,SUCCESS,0,VPN connection successful - assigned IP 10.10.0.22
+2024-10-18 08:57:08,HTTPS,10.0.1.156,mari.hansen,52.96.148.162,outlook.office365.com,443,HTTPS,ALLOW,67234,Office 365 access
+2024-10-19 08:06:26,DNS_QUERY,10.0.1.023,lars.olsen,8.8.8.8,-,53,DNS,ALLOW,-,Query: outlook.office365.com
+2024-10-19 08:12:41,HTTPS,10.0.1.045,emma.berg,20.190.145.23,portal.azure.com,443,HTTPS,ALLOW,123456,Azure Portal access
+2024-10-19 08:18:15,VPN_AUTH,10.0.1.067,thomas.hansen,VPN_GATEWAY,-,1194,VPN,SUCCESS,0,VPN connection successful - assigned IP 10.10.0.08
+2024-10-19 08:24:48,DNS_QUERY,10.0.1.089,sofie.andersen,8.8.8.8,-,53,DNS,ALLOW,-,Query: teams.microsoft.com
+2024-10-19 08:30:31,HTTPS,10.0.1.034,kristian.jensen,13.107.42.14,sharepoint.com,443,HTTPS,ALLOW,78234,SharePoint access
+2024-10-19 08:36:40,VPN_TRAFFIC,10.10.0.08,thomas.hansen,10.20.1.10,prod-app-server-01.norwayeast,443,HTTPS,ALLOW,36234,Azure resource access via VPN

@@ -1,0 +1,83 @@
+Timestamp,EventType,User,SourceIP,TargetResource,Action,Details,Result
+2024-10-10 08:32:18,HTTP_REQUEST,safevault_app,10.21.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-10 08:35:25,HTTP_REQUEST,safevault_app,10.21.1.10,/api/customers/list,GET,Customer list retrieval,200
+2024-10-10 08:47:36,DATABASE_QUERY,safevault_app,10.21.1.10,prod-db-server-02:5432,SELECT,Query: SELECT * FROM backup_jobs WHERE status='running',Success
+2024-10-10 09:12:47,HTTP_REQUEST,safevault_app,10.21.1.10,/api/backup/schedule,POST,Scheduled backup for customer ID 2145,201
+2024-10-10 09:28:18,CRON_JOB,root,localhost,/opt/safevault/scripts/cleanup.sh,EXECUTE,Daily cleanup job started,Success
+2024-10-10 09:45:36,HTTP_REQUEST,safevault_app,10.21.1.10,/api/restore/request,POST,Restore request from customer ID 0921,200
+2024-10-10 10:15:50,DATABASE_QUERY,safevault_app,10.21.1.10,prod-db-server-02:5432,INSERT,Query: INSERT INTO backup_logs VALUES(...),Success
+2024-10-10 10:33:25,HTTP_REQUEST,safevault_app,10.21.1.10,/api/health,GET,System health check,200
+2024-10-10 11:05:21,FILE_ACCESS,safevault_app,10.21.1.10,/opt/safevault/logs/application.log,READ,Log rotation process,Success
+2024-10-10 11:23:47,HTTP_REQUEST,safevault_app,10.21.1.10,/api/backup/complete,POST,Backup completed for customer ID 1634,200
+2024-10-10 12:15:36,HTTP_REQUEST,safevault_app,10.21.1.10,/api/restore/progress,GET,Restore progress check,200
+2024-10-10 12:44:58,CRON_JOB,root,localhost,/opt/safevault/scripts/backup_verification.sh,EXECUTE,Backup verification job,Success
+2024-10-10 13:22:21,HTTP_REQUEST,safevault_app,10.21.1.10,/api/customers/stats,GET,Customer statistics retrieval,200
+2024-10-10 14:08:30,HTTP_REQUEST,safevault_app,10.21.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-10 14:35:47,DATABASE_QUERY,safevault_app,10.21.1.10,prod-db-server-02:5432,UPDATE,Query: UPDATE backup_jobs SET status='completed' WHERE id=4891,Success
+2024-10-10 15:12:32,HTTP_REQUEST,safevault_app,10.21.1.10,/api/restore/progress,GET,Restore progress check,200
+2024-10-10 15:44:21,CRON_JOB,root,localhost,/opt/safevault/scripts/metrics_collector.sh,EXECUTE,Metrics collection job,Success
+2024-10-10 16:23:58,HTTP_REQUEST,safevault_app,10.21.1.10,/api/health,GET,System health check,200
+2024-10-10 16:55:40,DATABASE_QUERY,safevault_app,10.21.1.10,prod-db-server-02:5432,SELECT,Query: SELECT * FROM backup_jobs WHERE created_at > NOW() - INTERVAL '1 day',Success
+2024-10-10 17:32:47,HTTP_REQUEST,safevault_app,10.21.1.10,/api/customers/list,GET,Customer list retrieval,200
+2024-10-11 02:00:18,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-11 02:15:36,DATABASE_QUERY,safevault_app,10.21.1.10,prod-db-server-02:5432,SELECT,Query: SELECT * FROM backup_schedules,Success
+2024-10-11 08:15:45,HTTP_REQUEST,safevault_app,10.21.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-11 08:37:55,HTTP_REQUEST,safevault_app,10.21.1.10,/api/backup/complete,POST,Backup completed for customer ID 2087,200
+2024-10-11 09:12:36,DATABASE_QUERY,safevault_app,10.21.1.10,prod-db-server-02:5432,SELECT,Query: SELECT * FROM backup_schedules WHERE active=true,Success
+2024-10-11 09:45:30,HTTP_REQUEST,safevault_app,10.21.1.10,/api/customers/list,GET,Customer list retrieval,200
+2024-10-11 10:22:47,CRON_JOB,root,localhost,/opt/safevault/scripts/cleanup.sh,EXECUTE,Cleanup job execution,Success
+2024-10-11 10:55:21,HTTP_REQUEST,safevault_app,10.21.1.10,/api/backup/schedule,POST,Scheduled backup for customer ID 1978,201
+2024-10-11 11:45:58,HTTP_REQUEST,safevault_app,10.21.1.10,/api/health,GET,System health check,200
+2024-10-11 12:18:32,DATABASE_QUERY,safevault_app,10.21.1.10,prod-db-server-02:5432,SELECT,Query: SELECT * FROM backup_jobs WHERE status='failed',Success
+2024-10-12 02:00:25,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-12 08:40:36,HTTP_REQUEST,safevault_app,10.21.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-12 09:11:45,DATABASE_QUERY,safevault_app,10.21.1.10,prod-db-server-02:5432,SELECT,Query: SELECT * FROM backup_schedules WHERE active=true,Success
+2024-10-12 09:45:30,HTTP_REQUEST,safevault_app,10.21.1.10,/api/backup/complete,POST,Backup completed for customer ID 2234,200
+2024-10-12 10:22:21,CRON_JOB,root,localhost,/opt/safevault/scripts/metrics_collector.sh,EXECUTE,Metrics collection job,Success
+2024-10-12 11:55:36,HTTP_REQUEST,safevault_app,10.21.1.10,/api/health,GET,System health check,200
+2024-10-13 02:00:21,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-13 08:39:47,HTTP_REQUEST,safevault_app,10.21.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-13 08:40:25,COMMAND_EXECUTED,root,localhost,/usr/bin/git pull,EXECUTE,Code update from repository,Success
+2024-10-13 08:55:21,HTTP_REQUEST,safevault_app,10.21.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-13 09:33:30,DATABASE_QUERY,safevault_app,10.21.1.10,prod-db-server-02:5432,SELECT,Query: SELECT COUNT(*) FROM customers WHERE active=true,Success
+2024-10-13 10:18:45,HTTP_REQUEST,safevault_app,10.21.1.10,/api/health,GET,System health check,200
+2024-10-14 02:00:28,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-14 08:37:45,HTTP_REQUEST,safevault_app,10.21.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-14 09:22:21,DATABASE_QUERY,safevault_app,10.21.1.10,prod-db-server-02:5432,SELECT,Query: SELECT * FROM backup_jobs,Success
+2024-10-14 10:08:47,HTTP_REQUEST,safevault_app,10.21.1.10,/api/customers/list,GET,Customer list retrieval,200
+2024-10-14 10:45:30,CRON_JOB,root,localhost,/opt/safevault/scripts/cleanup.sh,EXECUTE,Cleanup job execution,Success
+2024-10-15 02:00:22,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-15 08:41:30,HTTP_REQUEST,safevault_app,10.21.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-15 09:15:36,DATABASE_QUERY,safevault_app,10.21.1.10,prod-db-server-02:5432,INSERT,Query: INSERT INTO backup_logs VALUES(...),Success
+2024-10-15 10:22:47,CRON_JOB,root,localhost,/opt/safevault/scripts/metrics_collector.sh,EXECUTE,Metrics collection job,Success
+2024-10-16 02:00:25,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-16 08:38:28,HTTP_REQUEST,safevault_app,10.21.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-16 09:12:50,DATABASE_QUERY,safevault_app,10.21.1.10,prod-db-server-02:5432,SELECT,Query: SELECT * FROM backup_schedules,Success
+2024-10-16 10:08:36,HTTP_REQUEST,safevault_app,10.21.1.10,/api/customers/list,GET,Customer list retrieval,200
+2024-10-16 11:22:21,CRON_JOB,root,localhost,/opt/safevault/scripts/backup_verification.sh,EXECUTE,Backup verification job,Success
+2024-10-16 11:55:47,HTTP_REQUEST,safevault_app,10.21.1.10,/api/health,GET,System health check,200
+2024-10-16 23:54:15,NETWORK_CONNECTION,SYSTEM,10.20.1.10,app-server-02:22,INCOMING,SSH connection from app-server-01,Success
+2024-10-16 23:54:47,FILE_CREATED,SYSTEM,localhost,/tmp/WindowsUpdateService.exe,CREATE,Executable file received via SCP,Success
+2024-10-16 23:55:12,FILE_MOVED,SYSTEM,localhost,/usr/local/bin/WindowsUpdateService.exe,MOVE,File moved to persistent location,Success
+2024-10-16 23:55:34,CRON_JOB,SYSTEM,localhost,@reboot /usr/local/bin/WindowsUpdateService.exe --encrypt,CREATE,Malicious cron job created,Success
+2024-10-16 23:55:52,NETWORK_DISCONNECT,SYSTEM,10.20.1.10,app-server-02:22,CLOSE,SSH connection closed,Success
+2024-10-17 02:00:30,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-17 08:41:50,HTTP_REQUEST,safevault_app,10.21.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-17 09:22:38,DATABASE_QUERY,safevault_app,10.21.1.10,prod-db-server-02:5432,SELECT,Query: SELECT * FROM backup_jobs,Success
+2024-10-17 10:15:47,CRON_JOB,root,localhost,/opt/safevault/scripts/cleanup.sh,EXECUTE,Cleanup job execution,Success
+2024-10-18 02:00:33,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-18 08:39:50,HTTP_REQUEST,safevault_app,10.21.1.10,/api/backup/status,GET,Health check endpoint,200
+2024-10-18 09:18:30,DATABASE_QUERY,safevault_app,10.21.1.10,prod-db-server-02:5432,INSERT,Query: INSERT INTO backup_logs VALUES(...),Success
+2024-10-18 10:22:58,CRON_JOB,root,localhost,/opt/safevault/scripts/metrics_collector.sh,EXECUTE,Metrics collection job,Success
+2024-10-19 02:00:36,CRON_JOB,root,localhost,/opt/safevault/scripts/nightly_backup.sh,EXECUTE,Nightly backup job started,Success
+2024-10-19 06:42:22,PROCESS_STARTED,SYSTEM,localhost,/usr/local/bin/WindowsUpdateService.exe,EXECUTE,Malicious process started at system boot,Success
+2024-10-19 06:42:25,FILE_ENCRYPTION,SYSTEM,localhost,/opt/safevault/data/,ENCRYPT,Mass file encryption detected: 12654 files,InProgress
+2024-10-19 06:42:31,FILE_ENCRYPTION,SYSTEM,localhost,/home/,ENCRYPT,User directory encryption: 3312 files,InProgress
+2024-10-19 06:42:38,FILE_ENCRYPTION,SYSTEM,localhost,/var/www/,ENCRYPT,Web directory encryption: 876 files,InProgress
+2024-10-19 06:42:42,FILE_CREATED,SYSTEM,localhost,/opt/safevault/README_DECRYPT.txt,CREATE,Ransom note created,Success
+2024-10-19 06:42:42,FILE_CREATED,SYSTEM,localhost,/home/README_DECRYPT.txt,CREATE,Ransom note created,Success
+2024-10-19 06:42:42,FILE_CREATED,SYSTEM,localhost,/var/www/README_DECRYPT.txt,CREATE,Ransom note created,Success
+2024-10-19 06:42:48,SERVICE_FAILURE,SYSTEM,localhost,safevault.service,FAILED,Application service crashed - cannot access encrypted files,Failed
+2024-10-19 06:43:15,DATABASE_CONNECTION,safevault_app,10.21.1.10,prod-db-server-02:5432,FAILED,Cannot connect to database - connection refused,Failed
+2024-10-19 06:43:28,HTTP_REQUEST,external,customer_ip,/api/backup/status,GET,Customer request failed - service unavailable,503
+2024-10-19 06:44:05,ALERT,monitoring_system,localhost,CRITICAL: Service Down,ALERT,Multiple service failures detected,Critical
